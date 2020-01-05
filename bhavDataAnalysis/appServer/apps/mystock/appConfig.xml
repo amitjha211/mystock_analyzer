@@ -1,0 +1,74 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<appConfig>
+  <applicationType>web</applicationType>
+  <applicationTitle>MLM</applicationTitle>
+  <!-- <defaultConnectionString type="mssql" name="main">Data Source=.\sql2;initial Catalog=ap_mlm;user id=sa;pwd=sa1983</defaultConnectionString> -->
+  <appSettings>
+    <appSetting key="applicationTitle">MLM</appSetting>
+    <appSetting key="dateFormat">dd/MM/yyyy</appSetting>
+    <appSetting key="dateTimeFormat">dd/MM/yyyy HH:MM ss</appSetting>
+  </appSettings>
+
+  <packages>
+    <!--<package assemblyName="bll.common.dll"  />
+    <package assemblyName="bll.billingDemo.dll" />-->
+  </packages>
+
+  <cruds>
+    <crud name="sysUser" tableName="sysUser" viewName="sysUser" primaryKey="id" isIdentity="true" />
+    <crud name="mStock" tableName="mStock" viewName="mStock" primaryKey="id" isIdentity="true" />
+    <crud name="trDaily_Price" tableName="trDaily_Price" viewName="vtrDaily_Price" primaryKey="id" isIdentity="true" />
+    <crud name="tmp_bhavdata" tableName="tmp_bhavdata" viewName="vtmp_bhavdata" primaryKey="id" isIdentity="true" />
+    <crud name="mIndex" tableName="mIndex" viewName="mIndex" primaryKey="id" isIdentity="true" />
+  </cruds>
+
+  <requestData type="getData">
+    <dt name="sysOrg" type="view">
+      <view>sysOrg</view>
+    </dt>
+    
+    <dt name="mStock" type="view">
+      <view>mStock</view>
+    </dt>
+
+    <dt name="stock_data" type="other" assemblyName="mystock.bll" classPath="mystock.bll.clsBussinessLogic" func="stock_data"></dt>
+    <dt name="stock_data_tmp" type="other" assemblyName="mystock.bll" classPath="mystock.bll.clsBussinessLogic" func="stock_data_tmp"></dt>
+    
+    <dt name="sysModuleOperations\selected" type="other" assemblyName="sys.bll" classPath="sys.bll.clsCustomData" func="getRoleModuleActions"></dt>
+    <dt name="getBhavDataInDataTable" type="other" assemblyName="mystock.bll" classPath="mystock.bll.clsUploadData" func="getBhavDataInDataTable"></dt>
+
+    <dt name="drp_mIndex" type="sql">
+      <sql>select distinct index_name from mIndex</sql>
+    </dt>
+  </requestData>
+
+  <requestData type="cmd">
+    <cmd type="other" name="upload_bhavdata"  assemblyName="mystock.bll" classPath="mystock.bll.clsUploadData" func="upload_bhavdata" />
+    <cmd type="other" name="upload_bhavdata_row"  assemblyName="mystock.bll" classPath="mystock.bll.clsUploadData" func="upload_bhavdata_row" />
+    
+    <cmd type="other" name="upload_bhavdata_tmp"  assemblyName="mystock.bll" classPath="mystock.bll.clsUploadData_tmp" func="upload_bhavdata" />
+    <cmd type="other" name="upload_bhavdata_row_tmp"  assemblyName="mystock.bll" classPath="mystock.bll.clsUploadData_tmp" func="upload_bhavdata_row" />
+
+
+    <cmd type="other" name="update_index_info"  assemblyName="mystock.bll" classPath="mystock.bll.clsBussinessLogic" func="update_index_info">
+      <validate type="basic" fieldName="index_name" fieldTitle="Index Name"  />
+    </cmd>>
+    <cmd type="other" name="system\login"  assemblyName="sys.bll" classPath="sys.bll.clsBussinessLogic" func="login" />
+    <cmd type="save" name="sysUser\save" crudName="sysUser">
+      <validations>
+        <validate type="basic" fieldName="name" fieldTitle="Name" maxLength="100" />
+        <validate type="unique" fieldName="name" fieldTitle="User Name" primaryKey="id" tableName="sysUser" />
+        <validate type="basic" fieldName="userid" fieldTitle="User ID" maxLength="50" />
+        <validate type="unique" fieldName="userid" fieldTitle="User ID" primaryKey="id" tableName="sysUser" />
+        <validate type="basic" fieldName="pwd" fieldTitle="Password" maxLength="50" />
+        <validate type="email" fieldName="email" fieldTitle="Email"  required="true" maxLength="500" />
+        <validate type="drp" fieldName="sysRoleID" fieldTitle="Role" />
+      </validations>
+    </cmd>
+    <cmd type="delete" name="sysUser\delete" crudName="sysUser" />
+  </requestData>
+  <requestData type="sqlreport">
+
+  </requestData>
+
+</appConfig>

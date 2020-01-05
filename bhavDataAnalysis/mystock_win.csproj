@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1100413F-C341-4BDB-9C00-CA4B7FCEABB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mystock_win</RootNamespace>
+    <AssemblyName>mystock_win</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\System.Data.SQLite\2010\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="winui">
+      <HintPath>..\..\output\winui\winui.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsBhavDataGrid.cs" />
+    <Compile Include="frmM_Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmM_Index.Designer.cs">
+      <DependentUpon>frmM_Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSYS_UpdateIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSYS_UpdateIndex.Designer.cs">
+      <DependentUpon>frmSYS_UpdateIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPT_SingleStockAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPT_SingleStockAnalysis.Designer.cs">
+      <DependentUpon>frmRPT_SingleStockAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBhavData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBhavData.Designer.cs">
+      <DependentUpon>frmBhavData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmM_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmM_Stock.Designer.cs">
+      <DependentUpon>frmM_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSYS_UploadBhavData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSYS_UploadBhavData.Designer.cs">
+      <DependentUpon>frmSYS_UploadBhavData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRPT_DailyAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRPT_DailyAnalysis.Designer.cs">
+      <DependentUpon>frmRPT_DailyAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmM_Index.resx">
+      <DependentUpon>frmM_Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSYS_UpdateIndex.resx">
+      <DependentUpon>frmSYS_UpdateIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPT_SingleStockAnalysis.resx">
+      <DependentUpon>frmRPT_SingleStockAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBhavData.resx">
+      <DependentUpon>frmBhavData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmM_Stock.resx">
+      <DependentUpon>frmM_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSYS_UploadBhavData.resx">
+      <DependentUpon>frmSYS_UploadBhavData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRPT_DailyAnalysis.resx">
+      <DependentUpon>frmRPT_DailyAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\cscore\dal\DAL.csproj">
+      <Project>{441F61A9-F898-4749-A1A7-B72EB6C1A771}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\cscore\ntier\NTier_Web.csproj">
+      <Project>{93A0DC0E-8B0E-4040-980B-EFCF91C336B0}</Project>
+      <Name>NTier_Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mystock.bll\mystock.bll.csproj">
+      <Project>{A648371B-B904-462D-9C21-03C4FFEC5331}</Project>
+      <Name>mystock.bll</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="appServer\apps\mystock\appConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appServer\apps\mystock\winforms.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appServer\apps\mystock\wintree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appServer\mystock.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

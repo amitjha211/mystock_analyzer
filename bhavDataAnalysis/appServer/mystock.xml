@@ -1,0 +1,31 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<appConfig>
+
+  <defaultConnectionString type="sqlite" name="main">Data Source=D:\myStock\mystock.db;Pooling=true;FailIfMissing=false</defaultConnectionString>
+  <appSettings>
+    <appSetting key="firstName">Amit</appSetting>
+    <appSetting key="lastName">Jha</appSetting>
+    <appSetting key="docPath">D:\current\project_data\dms.onboarding\EmployeePDFData</appSetting>
+    <appSetting key="ftp_folder">D:\current\project_data\dms.onboarding\ftp</appSetting>
+  </appSettings>
+
+  <cruds>
+    <crud name="amit" tableName="sysUser" viewName="sysUser" primaryKey="id" isIdentity="true" />
+  </cruds>
+
+  <requestData type="getData">
+    <dt name="amit" type="view">
+      <view>sysUser</view>
+    </dt>
+    <dt name="mCustomer" type="view">
+      <view>vmCustomer</view>
+      <orderby>id desc</orderby>
+    </dt>
+  </requestData>
+
+  <packages>
+    <!--<package assemblyName="bll.common.dll" />
+    <package assemblyName="bll.billingDemo.dll" />-->
+  </packages>
+
+</appConfig>

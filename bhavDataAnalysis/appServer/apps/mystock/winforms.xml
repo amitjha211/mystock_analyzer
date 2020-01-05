@@ -1,0 +1,29 @@
+<request type="winforms">
+  <packages>
+
+    <!-- <package assemblyName="ash.exe"  />
+      <package assemblyName="winui.erp.exe" />
+      upload_index_info
+	  -->
+    
+  </packages>
+
+  <frm formKey="test" assemblyName="mystock_win" formClassPath="mystock_win.frmTest" />
+  <frm formKey="upload_bhavdata" assemblyName="mystock_win" formClassPath="mystock_win.frmSYS_UploadBhavData" />
+  <frm formKey="upload_index_info" assemblyName="mystock_win" formClassPath="mystock_win.frmSYS_UpdateIndex" />
+  <frm formKey="rpt_analyze_daily" assemblyName="mystock_win" formClassPath="mystock_win.frmRPT_DailyAnalysis" />
+  <frm formKey="tool_analyze_bhavdata" assemblyName="mystock_win" formClassPath="mystock_win.frmBhavData" />
+
+  <frm formKey="sysUser" assemblyName="raj" formClassPath="raj.frmSYS_User" />
+  <frm formKey="sysCompany" assemblyName="BillingDemo" formPath="sysCompany" />
+  <frm formKey="mItemGroup" assemblyName="winui.erp" formClassPath="inventory\mItemGroup" />
+  <frm formKey="mItem" assemblyName="winui.erp" formPath="inventory\mItem" />
+  <frm formKey="mUOM" assemblyName="winui.erp" formPath="inventory\mUOM" />
+
+  <frm formKey="mTax" assemblyName="winui.erp" formPath="erp\mTax" />
+  <frm formKey="mCompany" assemblyName="winui.erp" formPath="erp\mCompany" />
+  <frm formKey="mEmployee" assemblyName="winui.erp" formClassPath="winui.erp.frmM_Employee" />
+
+  <frm formKey="trInward" assemblyName="ash" formClassPath="ash.frmTR_InwardEntry" />
+  <frm formKey="report\billlist" assemblyName="winui.erp" formClassPath="winui.erp.report.frmRPT_BillList" />
+</request>
